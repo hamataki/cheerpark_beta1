@@ -10,7 +10,7 @@ loginCheck();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Sign Up</title>
 
     <!-- Favicon -->

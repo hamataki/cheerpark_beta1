@@ -10,7 +10,7 @@ $id = $_GET['id'];
 $pdo = db_conn();
 
 // データ登録SQL作成
-$stmt = $pdo->prepare('DELETE FROM cheerpark_an_tableβ WHERE id = :id;');
+$stmt = $pdo->prepare('DELETE FROM cheerpark_an_tableβ1 WHERE id = :id;');
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $status = $stmt->execute(); //実行
 

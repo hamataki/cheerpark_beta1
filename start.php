@@ -10,7 +10,7 @@ loginCheck();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Start画面</title>
 
     <!-- Favicon -->
@@ -21,9 +21,9 @@ loginCheck();
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="">
         <header>
-            <nav class="navbar navbar-default">START</nav>
+            <nav class="">START</nav>
         </header>
 
         <div class="main">

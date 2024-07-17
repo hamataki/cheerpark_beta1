@@ -7,7 +7,7 @@ loginCheck();
 $pdo = db_conn();
 
 // データ取得SQL作成
-$stmt = $pdo->prepare("SELECT * FROM cheerpark_an_tableβ");
+$stmt = $pdo->prepare("SELECT * FROM cheerpark_an_tableβ1");
 $status = $stmt->execute();
 
 // データ表示
@@ -26,7 +26,7 @@ if ($status == false) {
         // $view .= '<img src="' . $result["imgfile"] . '" alt="uploaded image" class="m-1 h-28">';
         $view .= '<div class="relative pb-[56.25%] pt-8 h-0 rounded-md overflow-hidden [&_iframe]:absolute [&_iframe]:top-0 [&_iframe]:left-0 [&_iframe]:w-full [&_iframe]:h-full">';
         // youtubeの埋め込み
-        $view .= $result['imgfile'];
+        $view .= $result['youtube'];
         $view .= '</div>';
 
         $view .= '<div class="text-center">';
@@ -110,7 +110,7 @@ if ($status == false) {
                 <?php include("html/base.html"); ?>
             </div>
 
-            <div class="flex justify-center bottom-0 min-w-96">
+            <div class="flex justify-center bottom-0">
                 <?php include("html/footer.html"); ?>
             </div>
 

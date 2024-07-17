@@ -7,7 +7,7 @@ $id = $_GET['id']; //?id~**を受け取る
 $pdo = db_conn();
 
 // データ登録SQL作成
-$stmt = $pdo->prepare('SELECT * FROM cheerpark_an_tableβ WHERE id=:id;');
+$stmt = $pdo->prepare('SELECT * FROM cheerpark_an_tableβ1 WHERE id=:id;');
 
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $status = $stmt->execute();
@@ -58,13 +58,6 @@ if ($status == false) {
                     </select><br>
                 </div>
 
-                <!-- <div class="flex justify-center text-center m-4">
-                    <label id="label_imgfile" for="imgfile" class="text-1 font-bold w-3/5 px-1 py-3 text-center bg-gray-50 border-2 border-gray-500 rounded-full">
-                        <span class="">動画を選択</span>
-                    </label>
-                    <input accept="image/*" id="imgfile" type="file" name="imgfile" class="hidden">
-                </div> -->
-
                 <div class="flex justify-center text-center m-4">
                     <label id="label_imgfile" for="url" class="text-1 font-bold w-3/5 px-1 py-3 text-center bg-gray-50 border-2 border-gray-500 rounded-full">
                         <span class="">動画を選択</span>
@@ -73,9 +66,9 @@ if ($status == false) {
                 </div>
 
                 <div class="flex justify-center text-center m-2">
-                    <?php if (!empty($row['imgfile'])) : ?>
+                    <?php if (!empty($row['youtube'])) : ?>
                         <div class="w-full relative pb-[56.25%] pt-8 h-0 rounded-lg overflow-hidden [&_iframe]:absolute [&_iframe]:top-0 [&_iframe]:left-0 [&_iframe]:w-full [&_iframe]:h-full">';
-                            <?= ($row['imgfile'])  ?>
+                            <?= ($row['youtube'])  ?>
                         </div>
                     <?php endif; ?>
                 </div>

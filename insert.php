@@ -6,38 +6,19 @@ loginCheck();
 // POSTデータ取得
 $genre = $_POST['genre'];
 $note = $_POST['note'];
-$imgfile = $_POST['url'];
-
-
-// // 画像アップロードの処理
-// $imgfile = '';
-// if (isset($_FILES['imgfile'])) {
-//     //フォームから画像が送られてきたら。
-
-//     //ファイルの保存先を生成
-//     $upload_file = $_FILES['imgfile']['tmp_name'];
-//     $extension = pathinfo($_FILES['imgfile']['name'], PATHINFO_EXTENSION);
-//     $new_name = uniqid() . '.' . $extension;
-//     $image_path = 'img/' . $new_name;
-
-//     //一時保存先から生成したファイルの保存先に移動
-//     if (move_uploaded_file($upload_file, $image_path)) {
-//         //contentsテーブルに保存するために、ファイルパスを変数に入れる。
-//         $imgfile = $image_path;
-//     };
-// };
+$youtube = $_POST['url'];
 
 // DB接続します
 $pdo = db_conn();
 
 //データ登録SQL作成
 $stmt = $pdo->prepare('INSERT INTO
-        cheerpark_an_tableβ( id, imgfile, note, genre, date )
-        VALUES( NULL, :imgfile, :note, :genre, now() ) ');
+        cheerpark_an_tableβ1( id, youtube, note, genre, date )
+        VALUES( NULL, :youtube, :note, :genre, now() ) ');
 
 // バインド変数を用意
 $stmt->bindValue(':genre', $genre, PDO::PARAM_STR);
-$stmt->bindValue(':imgfile', $imgfile, PDO::PARAM_STR);
+$stmt->bindValue(':youtube', $youtube, PDO::PARAM_STR);
 $stmt->bindValue(':note', $note, PDO::PARAM_STR);
 
 // 実行

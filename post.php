@@ -33,16 +33,8 @@
                     </select>
                 </div>
 
-                <!-- <div class="flex justify-center text-center m-4">
-                    <label id="label_imgfile" for="imgfile" class="text-1 font-bold w-3/5 px-1 py-3 text-center bg-gray-50 border-2 border-gray-500 rounded-full">
-                        <span class="">動画を選択</span>
-                    </label>
-                    <input accept="image/*" id="imgfile" type="file" name="imgfile" class="hidden" required>
-                </div> -->
-
-
                 <div class="flex justify-center text-center m-4">
-                    <label id="label_imgfile" for="url" class="text-1 font-bold w-3/5 px-1 py-3 text-center bg-gray-50 border-2 border-gray-500 rounded-full">
+                    <label id="label_youtube" for="url" class="text-1 font-bold w-3/5 px-1 py-3 text-center bg-gray-50 border-2 border-gray-500 rounded-full">
                         <span class="">動画を選択</span>
                     </label>
                     <input type="text" id="url" name="url" class="" required>

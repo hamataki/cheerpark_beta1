@@ -9,9 +9,9 @@ $genre = $_POST['genre'];
 
 // データ取得SQL作成
 if ($genre == 'ALL') {
-    $stmt = $pdo->prepare("SELECT * FROM cheerpark_an_tableβ");
+    $stmt = $pdo->prepare("SELECT * FROM cheerpark_an_tableβ1");
 } else {
-    $stmt = $pdo->prepare("SELECT * FROM cheerpark_an_tableβ WHERE genre = :genre");
+    $stmt = $pdo->prepare("SELECT * FROM cheerpark_an_tableβ1 WHERE genre = :genre");
     $stmt->bindValue(':genre', $genre, PDO::PARAM_STR);
 };
 
@@ -33,8 +33,7 @@ if ($status == false) {
         // $view .= '<img src="' . $result["imgfile"] . '" alt="uploaded image" class="m-1 h-28">';
         $view .= '<div class="relative pb-[56.25%] pt-8 h-0 rounded-md overflow-hidden [&_iframe]:absolute [&_iframe]:top-0 [&_iframe]:left-0 [&_iframe]:w-full [&_iframe]:h-full">';
         // youtubeの埋め込み
-        $view .= $result['imgfile'];
-        $view .= '</iframe>';
+        $view .= $result['youtube'];
         $view .= '</div>';
 
         $view .= '<div class="text-center">';

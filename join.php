@@ -21,7 +21,7 @@ $pdo = db_conn();
 $hashed_pw = password_hash($lpw, PASSWORD_DEFAULT);
 
 // データ登録SQL作成
-$stmt = $pdo->prepare('INSERT INTO cheerpark_user_tableβ(id, name, email, lid, lpw, kanri_flg, life_flg, date)
+$stmt = $pdo->prepare('INSERT INTO cheerpark_user_tableβ1(id, name, email, lid, lpw, kanri_flg, life_flg, date)
 VALUES(NULL, :name, :email, :lid, :lpw, :kanri_flg, :life_flg, now())');
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 $stmt->bindValue(':email', $email, PDO::PARAM_STR);
