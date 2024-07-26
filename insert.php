@@ -6,7 +6,7 @@ loginCheck();
 // POSTデータ取得
 $genre = $_POST['genre'];
 $note = $_POST['note'];
-$youtube = $_POST['url'];
+$youtube = $_POST['youtube'];
 
 // DB接続します
 $pdo = db_conn();

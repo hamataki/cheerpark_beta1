@@ -35,6 +35,7 @@
                 </div>
 
                 <button type="submit" value="LOGIN" class="w-full px-8 py-3 font-semibold rounded-full bg-gray-800 text-gray-100">Login</button>
+
             </form>
 
             <div class="flex items-center pt-4 space-x-1">
@@ -64,7 +65,7 @@
             </div>
 
             <p class="text-xs text-center sm:px-6 text-gray-600">Don't have an account?
-                <a rel="noopener noreferrer" type="submit" href="start.php" class="underline text-gray-800">Sign up</a>
+                <a rel="noopener noreferrer" type="submit" href="signup.php" class="underline text-gray-800">Sign up</a>
             </p>
 
             <div class="flex justify-center absolute bottom-0">

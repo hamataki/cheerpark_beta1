@@ -39,8 +39,9 @@ https://preline.co/examples/team-sections.html
 
 11.x投稿機能  
 
+12.ajaxで早いロード  
+
 ⑦質問・疑問・感想、シェアしたいこと等なんでも  
-・[感想]　youtubeの埋め込みができるようになった。youtubeのサイズを変えるのに苦戦。CSSがむず過ぎて苦手です。  
+・[感想]　youtubeの埋め込みができるようになった。youtubeのサイズを変えるのに苦戦。CSSはTTPでカバー。 
  
-・[参照]　画像保存：https://zenn.dev/zennzenn_ok/articles/b910505b811cd7,  
-ファイルアップロードおまじない：https://mugenup-tech.hatenadiary.com/entry/2014/08/28/100910,  
+・[参照] 

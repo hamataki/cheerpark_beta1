@@ -1,7 +1,5 @@
 <?php
-session_start();
 require_once('funcs.php');
-loginCheck();
 ?>
 
 <?php
