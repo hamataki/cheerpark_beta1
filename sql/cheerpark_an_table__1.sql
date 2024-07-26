@@ -1,0 +1,74 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- ホスト: 127.0.0.1
+-- 生成日時: 2024-07-26 01:58:03
+-- サーバのバージョン： 10.4.32-MariaDB
+-- PHP のバージョン: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- データベース: `cheerpark_db_class`
+--
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `cheerpark_an_tableβ1`
+--
+
+CREATE TABLE `cheerpark_an_tableβ1` (
+  `id` int(12) NOT NULL,
+  `youtube` text NOT NULL,
+  `note` text NOT NULL,
+  `genre` varchar(64) NOT NULL,
+  `date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- テーブルのデータのダンプ `cheerpark_an_tableβ1`
+--
+
+INSERT INTO `cheerpark_an_tableβ1` (`id`, `youtube`, `note`, `genre`, `date`) VALUES
+(3, '<iframe width=\"545\" height=\"409\" src=\"https://www.youtube.com/embed/L0XeQhSnkHg\" title=\"iPhone を発表するスティーブ・ジョブス（日本語字幕）\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>', 'iphone', 'トレーニング', '0000-00-00 00:00:00'),
+(4, '<iframe width=\"727\" height=\"409\" src=\"https://www.youtube.com/embed/VyzqHFdzBKg\" title=\"スティーブ ・ジョブズ・スタンフォード大・卒業式スピーチ・2005年\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>', 'About connecting the dots.', '自己解説', '2024-07-17 13:21:54'),
+(5, '<iframe width=\"727\" height=\"409\" src=\"https://www.youtube.com/embed/VyzqHFdzBKg\" title=\"スティーブ ・ジョブズ・スタンフォード大・卒業式スピーチ・2005年\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>', 'q', '海外文化', '2024-07-17 13:27:32'),
+(7, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/j9otrvph8GE?list=UUiNCXr6Lcb_QJbJth1ravLA\" title=\"Montenegro tryout\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>', 'プレー集', 'プレー集', '2024-07-17 13:28:47'),
+(8, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/4FwTCrecSXg?list=UUjcCZsORXhZnpYASLGJ9EBA\" title=\"Montenegro play video\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>', 'プレー集', 'プレー集', '2024-07-17 13:29:27'),
+(9, '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/qoOOQDCJZ3c?list=UU2BoVdUveKK2avyc3xdq0Zw\" title=\"Play Highlight / Jun Toba / FC Lernayin Artsakh No.16 / Armenia Premier League (2022/23 Season)\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>', 'プレー集', 'プレー集', '2024-07-17 13:31:31'),
+(10, '<iframe width=\"727\" height=\"409\" src=\"https://www.youtube.com/embed/L0XeQhSnkHg\" title=\"iPhone を発表するスティーブ・ジョブス（日本語字幕）\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>', 'iphone', 'プレー集', '2024-07-26 00:00:49');
+
+--
+-- ダンプしたテーブルのインデックス
+--
+
+--
+-- テーブルのインデックス `cheerpark_an_tableβ1`
+--
+ALTER TABLE `cheerpark_an_tableβ1`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- ダンプしたテーブルの AUTO_INCREMENT
+--
+
+--
+-- テーブルの AUTO_INCREMENT `cheerpark_an_tableβ1`
+--
+ALTER TABLE `cheerpark_an_tableβ1`
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
