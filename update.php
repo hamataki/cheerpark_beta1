@@ -10,8 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $note = $_POST['note'];
     $genre = $_POST['genre'];
     $id = $_POST['id'];
-
-    if (isset($_POST['youtube']) && $_POST['youtube']['error'] === UPLOAD_ERR_OK) {
+    $youtube = $_POST['youtube'];
+    
+    if ($_POST['youtube']) {
 
         //データ登録SQL作成
         $stmt = $pdo->prepare('UPDATE cheerpark_an_tableβ1 SET youtube = :youtube, note = :note, genre = :genre, date = now() WHERE id = :id');
@@ -25,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bindValue(':note', $note, PDO::PARAM_STR);
     $stmt->bindValue(':genre', $genre, PDO::PARAM_STR);
     $stmt->bindValue(':id',     $id,     PDO::PARAM_INT);
-
+    
     // 実行
     $status = $stmt->execute(); //true or false
 

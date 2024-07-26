@@ -58,25 +58,27 @@ if ($status == false) {
                     </select><br>
                 </div>
 
-                <div class="flex justify-center text-center m-4">
-                    <label id="label_imgfile" for="url" class="text-1 font-bold w-3/5 px-1 py-3 text-center bg-gray-50 border-2 border-gray-500 rounded-full">
-                        <span class="">動画を選択</span>
-                    </label>
-                    <input type="text" id="url" name="url"  class="">
+
+                <div class="text-center m-4">
+                    <label id="label_youtube" for="youtube" class="text-center px-7 py-3 bg-gray-50 border-2 border-gray-500 rounded-full">
+                        <span class="text-1 font-bold">動画を選択</span>
+                    </label><br>
+                    <div class="m-4">
+                        <input type="text" id="youtube" name="youtube" class="w-full"  placeholder="<iframe width='' height='' src='https://www.youtube.com/embed/' title='' ></iframe>">
+                    </div>
                 </div>
 
-                <div class="flex justify-center text-center m-2">
+                <div class="flex justify-center text-center m-4">
                     <?php if (!empty($row['youtube'])) : ?>
-                        <div class="w-full relative pb-[56.25%] pt-8 h-0 rounded-lg overflow-hidden [&_iframe]:absolute [&_iframe]:top-0 [&_iframe]:left-0 [&_iframe]:w-full [&_iframe]:h-full">';
+                        <div id="before-preview" class="h-24 w-full relative pb-[56.25%] pt-8 h-0 rounded-lg overflow-hidden [&_iframe]:absolute [&_iframe]:top-0 [&_iframe]:left-0 [&_iframe]:w-full [&_iframe]:h-full">';
                             <?= ($row['youtube'])  ?>
                         </div>
                     <?php endif; ?>
                 </div>
 
-                <!-- else追加→既存画像なしでもimg要素を作成→jsでpreviewを操作できる -->
-                <!-- <div class="flex justify-center text-center m-4">
-                    <div class="preview h-28 hidden"></div>
-                </div> -->
+                <div class="flex justify-center text-center m-4">
+                    <div id="preview" class="hidden h-24 w-full relative pb-[56.25%] pt-8 h-0 rounded-lg overflow-hidden [&_iframe]:absolute [&_iframe]:top-0 [&_iframe]:left-0 [&_iframe]:w-full [&_iframe]:h-full"></div>
+                </div>
 
                 <div class="space-y-1 text-center m-5">
                     <div class="text-center">
