@@ -27,23 +27,42 @@ if ($status == false) {
     //Selectデータの数だけ自動でループしてくれる
     //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php
     while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-
         $view .= '<div class="p-4 py-3 border-2 border-gray-500 bg-gray-50 rounded-2xl">';
-        $view .= '<a href="edit.php?id=' . $result['id'] . '">';
-        // $view .= '<img src="' . $result["imgfile"] . '" alt="uploaded image" class="m-1 h-28">';
-        $view .= '<div class="relative pb-[56.25%] pt-8 h-0 rounded-md overflow-hidden [&_iframe]:absolute [&_iframe]:top-0 [&_iframe]:left-0 [&_iframe]:w-full [&_iframe]:h-full">';
-        // youtubeの埋め込み
-        $view .= $result['youtube'];
-        $view .= '</div>';
+        if ($_SESSION['user_id'] === $result['user_id']) {
 
-        $view .= '<div class="text-center">';
-        $view .= $result['date'] . ' # ' . $result['genre'];
-        $view .= '</div>';
-        $view .= '</a>';
+            $view .= '<a href="edit.php?id=' . $result['id'] . '">';
+            // $view .= '<img src="' . $result["imgfile"] . '" alt="uploaded image" class="m-1 h-28">';
+            $view .= '<div class="relative pb-[56.25%] pt-8 h-0 rounded-md overflow-hidden [&_iframe]:absolute [&_iframe]:top-0 [&_iframe]:left-0 [&_iframe]:w-full [&_iframe]:h-full">';
+            // youtubeの埋め込み
+            $view .= $result['youtube'];
+            $view .= '</div>';
 
-        $view .= '<a href="delete.php?id=' . $result['id'] . '" class="flex justify-end">';
-        $view .= '<i class="fa-solid fa-trash"></i>';
-        $view .= '</a>';
+            $view .= '<div class="text-center">';
+            $view .= $result['date'] . ' # ' . $result['genre'];
+            $view .= '</div>';
+            $view .= '</a>';
+
+            if ($_SESSION['kanri_flg'] !== 1) {
+                $view .= '<a href="delete.php?id=' . $result['id'] . '" class="flex justify-end">';
+                $view .= '<i class="fa-solid fa-trash"></i>';
+                $view .= '</a>';
+            }
+        } else {
+            $view .= '<div class="relative pb-[56.25%] pt-8 h-0 rounded-md overflow-hidden [&_iframe]:absolute [&_iframe]:top-0 [&_iframe]:left-0 [&_iframe]:w-full [&_iframe]:h-full">';
+            // youtubeの埋め込み
+            $view .= $result['youtube'];
+            $view .= '</div>';
+            $view .= '<div class="text-center">';
+            $view .= $result['date'] . ' # ' . $result['genre'];
+            $view .= '</div>';
+        }
+
+        if ($_SESSION['kanri_flg'] === 1) {
+            $view .= '<a href="delete.php?id=' . $result['id'] . '" class="flex justify-end">';
+            $view .= '<i class="fa-solid fa-trash"></i>';
+            $view .= '</a>';
+        }
+
         $view .= '</div>';
     };
 };

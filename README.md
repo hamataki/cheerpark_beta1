@@ -31,11 +31,12 @@ https://preline.co/examples/team-sections.html
 
 7.previewの表示   
 
-8.削除は編集でやればいいのでは？  
+8.投稿した人だけが編集できるようにした  
+if($_SESSION['user_id'] === $result['user_id']){}を利用する  
 
 9.  
 
-10.    
+10.削除は編集でやればいいのでは？    
 
 11.x投稿機能  
 

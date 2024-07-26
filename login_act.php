@@ -1,6 +1,8 @@
 <?php
 session_start();
 require_once('funcs.php');
+// loginCheck();
+
 $pdo = db_conn();
 
 //POST値を受け取る
@@ -32,7 +34,7 @@ if ($pw) { //* PasswordがHash化の場合はこっちのIFを使う
     //Login成功時 該当レコードがあればSESSIONに値を代入
     $_SESSION['chk_ssid'] = session_id();
     $_SESSION['kanri_flg'] = $val['kanri_flg'];
-    $_SESSION["name"]      = $val['name'];
+    $_SESSION['user_id'] = $val['id'];
 
     //Login成功時（post.phpへ）
     redirect("post.php");

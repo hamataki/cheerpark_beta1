@@ -7,19 +7,21 @@ loginCheck();
 $genre = $_POST['genre'];
 $note = $_POST['note'];
 $youtube = $_POST['youtube'];
+$user_id = $_SESSION['user_id'];
 
 // DB接続します
 $pdo = db_conn();
 
 //データ登録SQL作成
 $stmt = $pdo->prepare('INSERT INTO
-        cheerpark_an_tableβ1( id, youtube, note, genre, date )
-        VALUES( NULL, :youtube, :note, :genre, now() ) ');
+        cheerpark_an_tableβ1( id, user_id, youtube, note, genre, date )
+        VALUES( NULL, :user_id, :youtube, :note, :genre, now() ) ');
 
 // バインド変数を用意
-$stmt->bindValue(':genre', $genre, PDO::PARAM_STR);
+$stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
 $stmt->bindValue(':youtube', $youtube, PDO::PARAM_STR);
 $stmt->bindValue(':note', $note, PDO::PARAM_STR);
+$stmt->bindValue(':genre', $genre, PDO::PARAM_STR);
 
 // 実行
 $status = $stmt->execute(); //true or false
