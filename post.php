@@ -44,12 +44,12 @@ loginCheck();
                         <span class="text-1 font-bold">動画を選択</span>
                     </label><br>
                     <div class="m-4">
-                        <input type="text" id="youtube" name="youtube" class="px-7" required>
+                        <input type="text" id="youtube" name="youtube" class="w-full"  placeholder="<iframe width='' height='' src='https://www.youtube.com/embed/' title='' ></iframe>" required>
                     </div>
                 </div>
 
                 <div class="flex justify-center text-center m-4">
-                    <div class="preview h-28"></div>
+                    <div id="preview" class="h-24 w-full relative pb-[56.25%] pt-8 h-0 rounded-lg overflow-hidden [&_iframe]:absolute [&_iframe]:top-0 [&_iframe]:left-0 [&_iframe]:w-full [&_iframe]:h-full"></div>
                 </div>
 
                 <div class="space-y-1 text-center m-5">
