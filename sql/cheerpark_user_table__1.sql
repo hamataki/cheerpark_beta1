@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: 127.0.0.1
--- 生成日時: 2024-07-26 01:57:52
+-- 生成日時: 2024-07-27 02:24:04
 -- サーバのバージョン： 10.4.32-MariaDB
 -- PHP のバージョン: 8.2.12
 
@@ -45,7 +45,9 @@ CREATE TABLE `cheerpark_user_tableβ1` (
 INSERT INTO `cheerpark_user_tableβ1` (`id`, `name`, `email`, `lid`, `lpw`, `kanri_flg`, `life_flg`, `date`) VALUES
 (1, '濱滝 隆之介', 'hamatakiryunosuke@gmail.com', 'hamataki', '$2y$10$PQEMBzQVqLtcYEomiv8JIuibB989MR/PMwUoOb76Z50pG41oH94hW', 1, 0, '2024-07-17 13:09:29'),
 (2, 'Steve Jobs', 'test@gmal.com', 'steve', '$2y$10$/gMT1yPisaLq1.Q7Ild7n.ZaJxWPeXKQo/ElzG2y3TOfi52XhmZGC', 0, 0, '2024-07-17 13:16:13'),
-(3, '盛田昭夫', 'test@gmal.com', 'morita', '$2y$10$8WbZ.f7Cnr3AP9IXOKk/quKESZJbtqF2DGZddwtBxfqwJ2J/Z7njm', 0, 0, '2024-07-26 08:50:56');
+(3, '盛田昭夫', 'test@gmal.com', 'morita', '$2y$10$8WbZ.f7Cnr3AP9IXOKk/quKESZJbtqF2DGZddwtBxfqwJ2J/Z7njm', 0, 0, '2024-07-26 08:50:56'),
+(4, 'ユルゲン・クロップ', 'test@gmal.com', 'klopp', '$2y$10$PFgBQa5ZlZeGZi75vMp6du8OzqyOeOBSr7sNDKegQBCk6Ob66J2hq', 0, 0, '2024-07-26 16:52:45'),
+(6, '山田太郎', 'test@gmal.com', 'test1', '$2y$10$rm8N/mqDEYbK/DsalcICsuEw/HnHr3SED.FiLaVGFWuurRPfOL9XK', 0, 0, '2024-07-26 17:06:27');
 
 --
 -- ダンプしたテーブルのインデックス
@@ -65,7 +67,7 @@ ALTER TABLE `cheerpark_user_tableβ1`
 -- テーブルの AUTO_INCREMENT `cheerpark_user_tableβ1`
 --
 ALTER TABLE `cheerpark_user_tableβ1`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
