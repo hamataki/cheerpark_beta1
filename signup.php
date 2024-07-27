@@ -20,7 +20,7 @@ require_once('funcs.php');
 
 <body>
     <div class="flex justify-center">
-        <div class="w-full min-w-96 max-w-md p-5 rounded-xl bg-gray-50 text-gray-800">
+        <div class="w-full min-w-96 max-w-lg p-5 rounded-xl bg-gray-50 text-gray-800">
             <header>
                 <nav class="text-2xl font-bold text-center">Sign Up</nav>
             </header>
